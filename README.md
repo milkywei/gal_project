@@ -9,7 +9,7 @@
 | --- | --- |
 | Ruby | 2.4.2 |
 | Rails | ~> 5.1.4 |
-| PostgrSQL | ? |
+| PostgreSQL | ? |
 
 ### Ruby environmentがインストールされていない場合
 事前に下記を実行。
