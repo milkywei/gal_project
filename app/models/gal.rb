@@ -1,0 +1,2 @@
+class Gal < ApplicationRecord
+end
