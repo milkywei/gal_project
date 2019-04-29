@@ -9182,4 +9182,12 @@ input[type=range]::-ms-thumb {
   66% { transform: translateX(-800px); }
   100% { transform: translateX(0); }
 }
+.item{
+  display:inline-block;
+  margin:5px;
+  float:left;
+  border:1px solid #ccc;
+  background: #eee;
+  box-shadow:0 2px 1px #eee;
+}
  /*yamasaki add end*/
