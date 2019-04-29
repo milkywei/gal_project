@@ -9102,6 +9102,7 @@ input[type=range]::-ms-thumb {
  
  .lower-part{
     margin-top:100px;
+    text-align:center;
  }
  .groupe{
   margin-top:50px;
@@ -9182,9 +9183,16 @@ input[type=range]::-ms-thumb {
   66% { transform: translateX(-800px); }
   100% { transform: translateX(0); }
 }
-.item{
-  margin:5px;
-  
-  
+  .item {
+width: 200px;
+margin: 5px;
+float:left;
+display:inline-block;
+background: #eee;
+
 }
+
+
+  
+
  /*yamasaki add end*/
