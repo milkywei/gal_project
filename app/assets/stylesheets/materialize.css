@@ -9082,18 +9082,21 @@ input[type=range]::-ms-thumb {
     background:cover;
     position: relative;
  }*/
- .groupe img{
-  
-  float:left !important;
-  
-  padding:10px 10px;
-  height:auto! important;
+.example {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+ .example li{
+  display: table-cell;
+  vertical-align: middle;
+   width:21%;
  }
- .groupe li{
-  display:inline-block !important;
-  width:25% !important;
-   
-  
+
+ .example img{
+  height:300px;
+
+  padding:10px;
  }
 
  
