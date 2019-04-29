@@ -12,21 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-<<<<<<< HEAD
-topdir = /home/yamasaki/.rbenv/versions/2.4.2/include/ruby-2.4.0
-hdrdir = $(topdir)
-arch_hdrdir = /home/yamasaki/.rbenv/versions/2.4.2/include/ruby-2.4.0/x86_64-linux
-PATH_SEPARATOR = :
-VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/yamasaki/.rbenv/versions/2.4.2
-=======
 topdir = /Users/okamotomasahiro/.rbenv/versions/2.4.2/include/ruby-2.4.0
 hdrdir = $(topdir)
 arch_hdrdir = /Users/okamotomasahiro/.rbenv/versions/2.4.2/include/ruby-2.4.0/x86_64-darwin18
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/Users/okamotomasahiro/.rbenv/versions/2.4.2
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -40,13 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-<<<<<<< HEAD
-sitearchdir = $(DESTDIR)./.gem.20190427-4803-ksn80g
-sitelibdir = $(DESTDIR)./.gem.20190427-4803-ksn80g
-=======
-sitearchdir = $(DESTDIR)./.gem.20190428-69863-1u445o4
-sitelibdir = $(DESTDIR)./.gem.20190428-69863-1u445o4
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
+sitearchdir = $(DESTDIR)./.gem.20190429-43094-1b9niyv
+sitelibdir = $(DESTDIR)./.gem.20190429-43094-1b9niyv
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -64,11 +50,7 @@ dvidir = $(docdir)
 htmldir = $(docdir)
 infodir = $(datarootdir)/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
-<<<<<<< HEAD
-oldincludedir = $(DESTDIR)/usr/include
-=======
 oldincludedir = $(SDKROOT)/usr/include
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
@@ -81,21 +63,12 @@ bindir = $(exec_prefix)/bin
 archdir = $(rubyarchdir)
 
 
-<<<<<<< HEAD
-CC = gcc
-CXX = g++
-LIBRUBY = $(LIBRUBY_A)
-LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -Wl,-rpath,$(libdir) -L$(libdir) 
-LIBRUBYARG_STATIC = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
-=======
 CC = clang
 CXX = clang++
 LIBRUBY = $(LIBRUBY_A)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = 
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -106,21 +79,6 @@ cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = $(optflags) $(debugflags) $(warnflags)
 optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
-<<<<<<< HEAD
-warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0
-CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) $(cflags) -O3  -std=c99 $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
-DEFS     = 
-CPPFLAGS =  -I/home/yamasaki/.rbenv/versions/2.4.2/include  $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -L/home/yamasaki/.rbenv/versions/2.4.2/lib  -fstack-protector -rdynamic -Wl,-export-dynamic
-dldflags = -L/home/yamasaki/.rbenv/versions/2.4.2/lib  -Wl,--compress-debug-sections=zlib 
-ARCH_FLAG = 
-DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
-LDSHARED = $(CC) -shared
-LDSHAREDXX = $(CXX) -shared
-=======
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe -O3  -std=c99 $(ARCH_FLAG)
@@ -134,7 +92,6 @@ ARCH_FLAG =
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
 LDSHAREDXX = $(CXX) -dynamic -bundle
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 AR = ar
 EXEEXT = 
 
@@ -145,11 +102,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-<<<<<<< HEAD
-arch = x86_64-linux
-=======
 arch = x86_64-darwin18
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 sitearch = $(arch)
 ruby_version = 2.4.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -158,13 +111,8 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
-<<<<<<< HEAD
-RMDIRS = rmdir --ignore-fail-on-non-empty -p
-MAKEDIRS = /bin/mkdir -p
-=======
 RMDIRS = rmdir -p
 MAKEDIRS = mkdir -p
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 INSTALL = /usr/bin/install -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
@@ -175,11 +123,7 @@ TOUCH = exit >
 
 preload = 
 libpath = . $(libdir)
-<<<<<<< HEAD
-LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir)
-=======
 LIBPATH =  -L. -L$(libdir)
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -190,11 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = /bootsnap
 LOCAL_LIBS = 
-<<<<<<< HEAD
-LIBS =   -lpthread -ldl -lcrypt -lm   -lc
-=======
 LIBS =   -lpthread -ldl -lobjc 
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 ORIG_SRCS = bootsnap.c
 SRCS = $(ORIG_SRCS) 
 OBJS = bootsnap.o
@@ -203,11 +143,7 @@ LOCAL_HDRS =
 TARGET = bootsnap
 TARGET_NAME = bootsnap
 TARGET_ENTRY = Init_$(TARGET_NAME)
-<<<<<<< HEAD
-DLLIB = $(TARGET).so
-=======
 DLLIB = $(TARGET).bundle
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 EXTSTATIC = 
 STATIC_LIB = 
 
@@ -321,10 +257,7 @@ $(TARGET_SO): $(OBJS) Makefile
 	$(ECHO) linking shared-object bootsnap/$(DLLIB)
 	-$(Q)$(RM) $(@)
 	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
-<<<<<<< HEAD
-=======
 	$(Q) $(POSTLINK)
->>>>>>> 2f48e970a5eca9d9e443dca12f5511adb701c26b
 
 
 
