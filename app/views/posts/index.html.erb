@@ -1,33 +1,36 @@
 <div class="d-flex align-items-center">
 
-    <div class="ml-auto posts_button">
-        <a class="btn btn-outline-info" href="/posts/new" role="button">投稿するンゴ</a>
-    </div>
+  <div class="ml-auto posts_button">
+    <a class="btn btn-outline-info" href="/posts/new" role="button">投稿するンゴ</a>
+  </div>
+  <div class="search">
+    <p>検索</p>
+    <%= form_tag(posts_path, :method => 'get') do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :name => nil %>
+    <% end %>
+  </div>
 </div>
 <table class="table table-bordered border-primary table-hover table-sm posts_table">
   <h1>うちらゎさぃきょぅ</h1>
   <div>
-		<ul>
-			<li><img class="90-gal-01" src="/itoh.jpg"></li>
-			<li><img class="90-gal-02" src="/itoh.jpg"></li>
-			<li><img class="90-gal-03" src="/itoh.jpg"></li>			
-		</ul>
+		<tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <th><%= post.id %></th>
+          <td><%= post.title %></td>
+          <td><%= post.name %></td>
+          <td><%= post.tag %></td>
+          <td><%= image_tag post.img.url %></td>
+          <td><%= post.created_at.to_s(:datetime_base) %></td>
+        </tr>
+      <% end %>
+    </tbody>
 	</div>
   <div class="twitter posts_button">
   　<a href="//twitter.com/share" class="twitter-share-button" data-text="平成さいきょうギャル" data-url="gal" data-lang="ja">
       Twitterで友達におしえる
     </a>
   </div>
-  <tbody>
-  <% @posts.each do |post| %>
-        <tr>
-            <th><%= post.id %></th>
-            <td><%= post.title %></td>
-            <td><%= post.name %></td>
-            <td><%= image_tag post.img.url %></td>
-            <td><%= post.created_at.to_s(:datetime_base) %></td>
-        </tr>
-      <% end %>
-  </tbody>
 </table>
 

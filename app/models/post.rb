@@ -13,4 +13,12 @@
 
 class Post < ApplicationRecord
   mount_uploader :img, ImgUploader
+
+  def self.search(search)
+    if search
+      Post.where(['tag LIKE ?', "%#{search}%"])
+    else
+      Post.all
+    end
+  end
 end
