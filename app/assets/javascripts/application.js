@@ -13,8 +13,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require activestorage
-//= require rails-ujs
+
 //= require jquery
 //= require jquery.turbolinks
 //= require_tree .
-//= require masonry.pkgd.min
