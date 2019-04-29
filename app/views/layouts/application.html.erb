@@ -11,31 +11,25 @@
           <script src="js/materialize.js"></script>
           <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
           <%= stylesheet_link_tag    'application', media: 'all' %>
-          <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      
           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+          <script type="text/javascript" src="masonry.min.js"></script>
           <%= javascript_include_tag 'application' %>
           <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
            
           
           <!--<script type="text/javascript" src="/masonry.pkgd.min.js"></script>
           <script type="text/javascript" src="/wookmark.min.js"></script>-->
-         <script type="text/javascript">
+
  
-  $(function(){
-    // 最後のタイル要素内の画像が読み込まれたら実行
-    $("#image_box li:last img").load(function(){
-      var options = {
-        autoResize: true, // ブラウザの大きさに合わせて要素を自動リサイズ
-        container: $('#image_box'), // 適用するリストを囲っている要素を指定
-        offset: 10, // 要素間の間隔を指定
-        itemWidth: 210 // 各要素の幅を指定     
-      };
-      var handler = $('#image_box li'); // タイル風にする要素を指定       
-      handler.wookmark(options); // wookmarkをオプション付きで実行
-    });
-  });
- 
+        <script>
+$(function(){
+$('#container').masonry({ //ここには敷き詰めたい要素を囲うidなど指定します。
+itemSelector : '.item'  //ここに敷き詰めたい要素のclassを指定します。
+});
+});
 </script>
+
   </head>
       
   <body>
