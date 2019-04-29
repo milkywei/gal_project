@@ -15,6 +15,10 @@ class PostsController < ApplicationController
     redirect_to action: 'index'
   end
 
+  def show
+    @post = Post.find_by(id: params[:id])
+  end
+
   private
 
   def permit_params

@@ -14,18 +14,14 @@
 <table class="table table-bordered border-primary table-hover table-sm posts_table">
   <h1>うちらゎさぃきょぅ</h1>
   <div>
-		<tbody>
-      <% @posts.each do |post| %>
-        <tr>
-          <th><%= post.id %></th>
-          <td><%= post.title %></td>
-          <td><%= post.name %></td>
-          <td><%= post.tag %></td>
-          <td><%= image_tag post.img.url %></td>
-          <td><%= post.created_at.to_s(:datetime_base) %></td>
-        </tr>
-      <% end %>
-    </tbody>
+    <% @posts.each do |post| %>   
+      <div class="contents">
+        <%= post.title %>
+        投稿者: <%= post.name %>
+        タグ: <%= post.tag %>
+        <%= link_to (image_tag post.img.url), "/posts/#{post.id}" %>
+      </div>
+    <% end %>
 	</div>
   <div class="twitter posts_button">
   　<a href="//twitter.com/share" class="twitter-share-button" data-text="平成さいきょうギャル" data-url="gal" data-lang="ja">
