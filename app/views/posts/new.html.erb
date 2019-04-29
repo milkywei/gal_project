@@ -1,0 +1,55 @@
+<div class="d-flex align-items-center">
+  <h1>投稿するンゴ</h1>
+  <div class="ml-auto posts_button">
+      <a class="btn btn-outline-info" href="/posts">みんなどんなの投稿してる?</a>
+  </div>
+</div>
+<%= form_for @post do |f| %>
+    <div class="form-group">
+        <%= f.label :name, '投稿者' %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <small id="poster-tip" class="form-text text-muted">
+        </small>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :title, 'たいとる' %>
+        <%= f.text_field :title, class: 'form-control' %>
+        <small id="poster-tip" class="form-text text-muted">
+        </small>
+    </div>
+
+
+    <%= f.label :img %>
+    <%= f.file_field :img, id: :gal_img %>
+      <script type="text/javascript">
+        $(function() {
+        function readURL(input) {
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              $('#img_prev').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+        $("#book_img").change(function(){
+          readURL(this);
+        });
+        });
+      </script>
+    <%= image_tag @post.img.url, id: :img_prev if @post.img? %>
+    <p><%= f.check_box :remove_img %>画像を削除する</p>
+
+    <div class="form-group">
+        <%= f.label :content, 'この子についておしえて' %>
+        <%= f.text_area :content, class: 'form-control', rows:10 %>
+        <small id=content-tip" class="form-text text-muted">
+        </small>
+    </div>
+
+    <%= f.submit '投稿してもおけまる水産', class: 'btn btn-info btn-block' %>
+    <small id="submit-tip" class="form-text text-muted">
+    </small>
+
+<% end %>
