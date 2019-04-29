@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new(permit_params)
-    @post.save
+    # @post.save
     redirect_to action: 'index'
   end
 
@@ -16,6 +16,6 @@ class PostsController < ApplicationController
   private
 
   def permit_params
-    params.require(:post).permit(:name, :title, :content, :img, :img_cache, :remove_img)
+    params.require(:post).permit(:name, :title, :content, :img, :img_cache, :remove_img) 
   end
 end
