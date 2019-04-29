@@ -12,6 +12,14 @@
         </small>
     </div>
 
+    <div class="form-group">
+        <%= f.label :title, 'たいとる' %>
+        <%= f.text_field :title, class: 'form-control' %>
+        <small id="poster-tip" class="form-text text-muted">
+        </small>
+    </div>
+
+
     <%= f.label :img %>
     <%= f.file_field :img, id: :gal_img %>
       <script type="text/javascript">
@@ -31,7 +39,7 @@
         });
       </script>
     <%= image_tag @post.img.url, id: :img_prev if @post.img? %>
-    <p><%= form.check_box :remove_img %>画像を削除する</p>
+    <p><%= f.check_box :remove_img %>画像を削除する</p>
 
     <div class="form-group">
         <%= f.label :content, 'この子についておしえて' %>
