@@ -13,9 +13,9 @@
 				</div>
 				<div id="css-slider">
 					<div class="slider-wrapper">
-						<div class="slide-item"><img class="90-gal-01" src="/itoh.jpg"><</div>
-						<div class="slide-item"><img class="90-gal-01" src="/itoh.jpg"><</div>
-						<div class="slide-item"><img class="90-gal-01" src="/itoh.jpg"><</div>
+						<div class="slide-item"><img class="90-gal-01" src="/itoh.jpg"></div>
+						<div class="slide-item"><img class="90-gal-01" src="/itoh.jpg"></div>
+						<div class="slide-item"><img class="90-gal-01" src="/itoh.jpg"></div>
 					</div>
 				</div>
 			</div>
@@ -86,4 +86,11 @@
     <div class="item"><img src="/gyaru/img_41.jpg" width="200"></div>
     <div class="item"><img src="/gyaru/img_42.jpg" width="200"></div>
   </div>
+  <script>
+$(function(){
+$('#container').masonry({ //ここには敷き詰めたい要素を囲うidなど指定します。
+itemSelector : '.item'  //ここに敷き詰めたい要素のclassを指定します。
+});
+});
+</script>
 </div>
