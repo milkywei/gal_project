@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.search(params[:search])
+    #@posts = Post.all
   end
 
   def new
@@ -14,9 +15,13 @@ class PostsController < ApplicationController
     redirect_to action: 'index'
   end
 
+  def show
+    @post = Post.find_by(id: params[:id])
+  end
+
   private
 
   def permit_params
-    params.require(:post).permit(:name, :title, :content, :img, :img_cache, :remove_img) 
+    params.require(:post).permit(:name, :title, :content, :tag, :img, :img_cache, :remove_img) 
   end
 end

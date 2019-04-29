@@ -1,0 +1,15 @@
+current directory: /home/yamasaki/work/rails/gal_project/vendor/bundle/ruby/2.4.0/gems/bindex-0.7.0/ext/skiptrace
+/home/yamasaki/.rbenv/versions/2.4.2/bin/ruby -r ./siteconf20190427-4803-7iije1.rb extconf.rb
+creating Makefile
+
+current directory: /home/yamasaki/work/rails/gal_project/vendor/bundle/ruby/2.4.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/yamasaki/work/rails/gal_project/vendor/bundle/ruby/2.4.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/cruby.so
+
+current directory: /home/yamasaki/work/rails/gal_project/vendor/bundle/ruby/2.4.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20190427-4803-18k61e7/skiptrace
