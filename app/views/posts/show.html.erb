@@ -1,8 +1,16 @@
-<div class="details">
-	<p>投稿者: <%= @post.name %></p>
-	<p>タイトル: <%= @post.title %></p>
-	<p>タグ名: <%= @post.tag %></p>
-	<p><%= image_tag @post.img.url %></p>
-	<p>投稿者の感想: <%= @post.content  %></p>
-	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="平成最後のギャルずかんだよ" data-lang="ja" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="show-container">
+	<div class="show-upper">
+		<div class="show-details">
+			<div class="middle-container">
+				<div class="show-author">投稿者: <%= @post.name %></div>
+				<div class="show-title">タイトル: <%= @post.title %></div>
+				<div class="show-tagu">タグ名: <%= @post.tag %></div>
+			</div>
+			<div class="show-image"><%= image_tag @post.img.url %></div>
+			<div class="show-review">投稿者の感想: <%= @post.content  %></div>
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="平成最後のギャルずかんだよ" data-lang="ja" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+	<div class="show-lower">
+	</div>
 </div>
