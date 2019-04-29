@@ -4,13 +4,14 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new(permit_params)
+    @post = Post.new
     # @post.save
-    redirect_to action: 'index'
+    # redirect_to action: 'index'
   end
 
   def create
     Post.create(permit_params)
+    redirect_to action: 'index'
   end
 
   private
