@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.search(params[:search])
+    #@posts = Post.all
   end
 
   def new
@@ -17,6 +18,6 @@ class PostsController < ApplicationController
   private
 
   def permit_params
-    params.require(:post).permit(:name, :title, :content, :img, :img_cache, :remove_img) 
+    params.require(:post).permit(:name, :title, :content, :tag, :img, :img_cache, :remove_img) 
   end
 end
