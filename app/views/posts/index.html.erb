@@ -12,19 +12,28 @@
 </div>
 <table class="table table-bordered border-primary table-hover table-sm posts_table">
   <h1>うちらゎさぃきょぅ</h1>
-  <div>
+  <div id="container">
     <% @posts.each do |post| %>   
-      <div class="contents">
-        <%= post.title %>
-        投稿者: <%= post.name %>
-        タグ: <%= post.tag %>
-        <%= link_to (image_tag post.img.url), "/posts/#{post.id}" %>
+      <div class="post">
+        <%= link_to (image_tag post.img.url, :width => '250'), "/posts/#{post.id}" %>
+    
+        <p><%= post.title %></p>
+        <p>投稿者: <%= post.name %></p>
+        <p>タグ: <%= post.tag %></p>
       </div>
     <% end %>
 	</div>
   <div class="twitter posts_button">
-  　<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="平成最後のギャルずかんだよ" data-lang="ja" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  　<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" class="twbtn twitter-share-button" data-text="平成最後のギャルずかんだよ" data-lang="ja" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </a>
   </div>
+  <script>
+$(function(){
+$('#container').masonry({ //ここには敷き詰めたい要素を囲うidなど指定します。
+itemSelector : '.post'  //ここに敷き詰めたい要素のclassを指定します。
+});
+});
+</script>
+
 </table>
 
