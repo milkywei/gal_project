@@ -9242,12 +9242,18 @@ background: #eee;
 .h_select p{
   padding-top:30px;
   font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
-  font-family: "VL Gothic";
+  /* font-family: "VL Gothic"; */
   font-size:50px!important;
   color: #585858;
   
 }
 
+.lower-part p{
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+}
 
+.lower-part h1{
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+}
 
  /*yamasaki add end*/

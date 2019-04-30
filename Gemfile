@@ -7,7 +7,7 @@ ruby '2.4.2'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
 gem 'jquery-turbolinks'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
