@@ -18,8 +18,7 @@
   <div id="container">
     <% @posts.each do |post| %>   
       <div class="post">
-        <%#= link_to image_tag(post.img.url, :width => '250'), posts_path(:id) %>
-        <%= image_tag post.img.url %>
+        <%= link_to image_tag(post.img_url, :width => '250'), posts_path(:id) %>
         <p><%= post.title %></p>
         <p>投稿者: <%= post.name %></p>
         <p>タグ: <%= post.tag %></p>
