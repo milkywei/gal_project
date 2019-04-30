@@ -50,6 +50,9 @@
 .d-flex {
   display:block;
   text-align: center;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-size: 25px;
 }
 
 .btn-change {
@@ -79,6 +82,7 @@
   margin-right: 400px;
   margin-left: 400px;
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .form-control {
@@ -89,7 +93,8 @@
 
 .form-tag {
   font-size: 20px;
-  color: dimgray;
+  color: #fffafa;
+  padding-bottom: 10px;
 }
 
 .post-inner {
@@ -100,5 +105,17 @@
 .posts_button {
   margin-top: 30px;
   margin-right: 50px;
+  a {
+    margin: 0px;
+    border-radius: 10px;
+  }
 }
 
+.change-color {
+  background-color: white;
+}
+
+.image {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
