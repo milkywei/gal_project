@@ -9149,15 +9149,16 @@ input[type=range]::-ms-thumb {
   display:block;
   padding-top:100px;
   margin:auto;
-  width:300px;
   padding-bottom:100px;
-
+  
 }
 .btn-component a{
-
   background-color: #26a69a !important;
   color: #fff !important;
   font-weight: bold;
+}
+.btn_sub a{
+  font-size:20px;
 }
 .btn-component a:hover{
   background-color: #74cac1 !important;
@@ -9211,6 +9212,6 @@ background: #eee;
   opacity: 0.7;		
 }
 
-  
+
 
  /*yamasaki add end*/
