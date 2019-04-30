@@ -1,17 +1,16 @@
+<div class="search">
+  <%= form_tag(posts_path, :method => 'get') do %>
+    <div class="display"><%= submit_tag 'タグ検索', :name => nil, class: "btn btn-outline-info btn-block" %></div>
+    <div class="display"><%= text_field_tag :search, '', placeholder: '白ギャル' %></div>
+  <% end %>
+</div>
+<h1>うちらゎさぃきょぅ</h1>
 <div class="d-flex align-items-center">
-
-  <div class="ml-auto posts_button">
+  <div class="ml-auto posts_button btn-change">
     <a class="btn btn-outline-info" href="/posts/new" role="button">投稿するンゴ</a>
-  </div>
-  <div class="search">
-    <%= form_tag(posts_path, :method => 'get') do %>
-      <%= text_field_tag :search %>
-      <%= submit_tag 'タグ検索', :name => nil, class: "btn btn-outline-info" %>
-    <% end %>
   </div>
 </div>
 <table class="table table-bordered border-primary table-hover table-sm posts_table">
-  <h1>うちらゎさぃきょぅ</h1>
   <div id="container">
     <% @posts.each do |post| %>   
       <div class="post">
