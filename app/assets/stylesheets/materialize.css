@@ -9149,14 +9149,16 @@ input[type=range]::-ms-thumb {
   display:block;
   padding-top:100px;
   margin:auto;
-  width:300px;
-
+  padding-bottom:100px;
+  
 }
 .btn-component a{
-
   background-color: #26a69a !important;
   color: #fff !important;
   font-weight: bold;
+}
+.btn_sub a{
+  font-size:20px;
 }
 .btn-component a:hover{
   background-color: #74cac1 !important;
@@ -9184,8 +9186,8 @@ input[type=range]::-ms-thumb {
   100% { transform: translateX(0); }
 }
   .item {
-width: 200px;
-margin: 5px;
+width: 250px;
+margin: 6px;
 float:left;
 display:inline-block;
 background: #eee;
@@ -9194,13 +9196,22 @@ background: #eee;
 
 .post{
   
-  margin:5px;
+  margin:6px;
   float:left;
   background: #a8a8a8;
   display:inline-block;
 }
+.item img{
+
+	border-radius: 6px ;
+  transition:0.3s;
+}
+.item img:hover{
+  transform: scale(1.05);	/*画像の拡大率*/
+  transition-duration: 0.3s;
+  opacity: 0.7;		
+}
 
 
-  
 
  /*yamasaki add end*/
