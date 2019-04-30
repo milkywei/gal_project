@@ -9186,8 +9186,8 @@ input[type=range]::-ms-thumb {
   100% { transform: translateX(0); }
 }
   .item {
-width: 250px;
-margin: 6px;
+
+margin:11px 11px;
 float:left;
 display:inline-block;
 background: #eee;
@@ -9196,11 +9196,38 @@ background: #eee;
 
 .post{
   
-  margin:6px;
+  margin:15px;
   float:left;
-  background: #a8a8a8;
+  transition-duration: 0.3s;
+  background: rgb(255, 255, 255);
   display:inline-block;
+  border-radius: 6px ;
+  padding-bottom:10px;
 }
+.post:hover{
+  transition-duration: 0.3s;
+  background: rgb(231, 231, 231);
+  transform: scale(1.05);
+}
+
+.post p{
+  margin:0px;
+  height:25px;
+}
+
+
+
+.post img{
+  border-radius: 6px ;
+	
+  transition:0.3s;
+}
+
+/*.post img:hover{
+  transform: scale(1.05);	
+  transition-duration: 0.3s;
+  opacity: 0.7;		
+}*/
 .item img{
 
 	border-radius: 6px ;
