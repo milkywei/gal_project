@@ -1,6 +1,8 @@
 # 平成ギャル図鑑
 「Webサービスを通して素晴らしき日本の平成ギャル文化を後世に遺す」という壮大なビジョンのもと始動した， 歴史的文化的に大変意義のある取り組み
 
+https://drive.google.com/open?id=1GafgpJEWfsfRctqePAbjH4gOs-KluJ_D
+
 ### 初期モックアップ
 ![iOSgayzo](https://user-images.githubusercontent.com/30789283/56588966-51913180-661f-11e9-97c4-a1d2af020a5d.jpg)
 
