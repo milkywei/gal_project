@@ -29,8 +29,11 @@
   </div>
   <script>
 $(function(){
-$('#container').masonry({ //ここには敷き詰めたい要素を囲うidなど指定します。
-itemSelector : '.post'  //ここに敷き詰めたい要素のclassを指定します。
+var $container = $('#container');
+$container.imagesLoaded( function(){
+$container.masonry({
+itemSelector : '.post'
+});
 });
 });
 </script>
