@@ -1,62 +1,66 @@
-<div class="d-flex align-items-center">
-  <h1>投稿するンゴ</h1>
-  <div class="ml-auto posts_button">
-      <a class="btn btn-outline-info" href="/posts">みんなどんなの投稿してる?</a>
+<div class="all">
+  <div class="d-flex align-items-center">
+    <h1>投稿するンゴ</h1>
+    <div class="ml-auto posts_button">
+        <a class="btn btn-outline-info" href="/posts">みんなどんなの投稿してる?</a>
+    </div>
   </div>
-</div>
-<%= form_for @post do |f| %>
-    <div class="form-group">
-        <%= f.label :name, '投稿者' %>
-        <%= f.text_field :name, class: 'form-control' %>
-        <small id="poster-tip" class="form-text text-muted">
-        </small>
-    </div>
+  <%= form_for @post do |f| %>
+      <div class="form-group">
+          <%= f.label :name, '投稿者', class: 'form-tag' %>
+          <%= f.text_area :name, class: 'form-control' %>
+          <small id="poster-tip" class="form-text text-muted">
+          </small>
+      </div>
 
-    <div class="form-group">
-        <%= f.label :title, 'たいとる' %>
-        <%= f.text_field :title, class: 'form-control' %>
-        <small id="poster-tip" class="form-text text-muted">
-        </small>
-    </div>
+      <div class="form-group">
+          <%= f.label :title, 'タイトル', class: 'form-tag' %>
+          <%= f.text_area :title, class: 'form-control' %>
+          <small id="poster-tip" class="form-text text-muted">
+          </small>
+      </div>
 
-    <div class="form-group">
-        <%= f.label :tag, 'タグ' %>
-        <%= f.text_field :tag, class: 'form-control' %>
-        <small id="poster-tip" class="form-text text-muted">
-        </small>
-    </div>
+      <div class="form-group">
+          <%= f.label :tag, 'タグ', class: 'form-tag' %>
+          <%= f.text_area :tag, class: 'form-control' %>
+          <small id="poster-tip" class="form-text text-muted">
+          </small>
+      </div>
 
 
-    <%= f.label :img %>
-    <%= f.file_field :img, id: :gal_img %>
-      <script type="text/javascript">
-        $(function() {
-        function readURL(input) {
-          if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-              $('#img_prev').attr('src', e.target.result);
+      <%= f.label :img, class: 'form-tag' %>
+      <%= f.file_field :img, id: :gal_img %>
+        <script type="text/javascript">
+          $(function() {
+          function readURL(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                $('#img_prev').attr('src', e.target.result);
+              }
+              reader.readAsDataURL(input.files[0]);
             }
-            reader.readAsDataURL(input.files[0]);
           }
-        }
-        $("#book_img").change(function(){
-          readURL(this);
-        });
-        });
-      </script>
-    <%= image_tag @post.img.url, id: :img_prev if @post.img? %>
-    <p><%= f.check_box :remove_img %>画像を削除する</p>
+          $("#book_img").change(function(){
+            readURL(this);
+          });
+          });
+        </script>
+      <%= image_tag @post.img.url, id: :img_prev if @post.img? %>
 
-    <div class="form-group">
-        <%= f.label :content, 'この子についておしえて' %>
-        <%= f.text_area :content, class: 'form-control', rows:10 %>
-        <small id=content-tip" class="form-text text-muted">
-        </small>
-    </div>
+      <div class="form-group">
+          <%= f.label :content, 'この子についておしえて', class: 'form-tag' %>
+          <%= f.text_area :content, class: 'form-control', rows:5 %>
+          <small id=content-tip" class="form-text text-muted">
+          </small>
+      </div>
+      <div class="post-outer">
+        <div class="post-inner">
+          <%= f.submit '投稿してもおけまる水産', class: 'btn btn-info btn-block btn-okemaru' %>
+        </div>
+      </div>
+      <small id="submit-tip" class="form-text text-muted">
+      </small>
 
-    <%= f.submit '投稿してもおけまる水産', class: 'btn btn-info btn-block' %>
-    <small id="submit-tip" class="form-text text-muted">
-    </small>
-
-<% end %>
+  <% end %>
+</div>
