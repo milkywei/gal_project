@@ -4,9 +4,12 @@
     <div class="d-flex align-items-center">
       投稿するンゴ
       <div class="ml-auto posts_button change-color">
-          <a class="btn btn-outline-info" href="/posts">みんなどんなの投稿してる?</a>
+        <a class="btn btn-outline-info" href="/posts">みんなどんなの投稿してる?</a>
       </div>
     </div>
+    <% if @post.errors.any? %>
+        <p>記入漏れがあるよ！</p>
+    <% end %>
     <%= form_for @post do |f| %>
         <div class="form-group">
             <%= f.label :name, '投稿者', class: 'form-tag' %>

@@ -12,6 +12,11 @@
 #
 
 class Post < ApplicationRecord
+  validates :name, presence: true
+  validates :title, presence: true
+  validates :img, presence: true
+  validates :content, presence: true
+
   mount_uploader :img, ImgUploader
 
   def self.search(search)

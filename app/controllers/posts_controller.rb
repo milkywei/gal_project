@@ -11,8 +11,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(permit_params)
-    redirect_to action: 'index'
+    @post = Post.new(permit_params)
+    if @post.save
+      redirect_to action: 'index'
+    else
+      render 'posts/new'
+    end
   end
 
   def show
