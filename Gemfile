@@ -63,3 +63,4 @@ gem 'annotate'
 gem 'bootstrap'
 
 gem 'carrierwave'
+gem 'meta-tags'
