@@ -1,9 +1,8 @@
 # 平成ギャル図鑑
+[![Image from Gyazo](https://i.gyazo.com/b19f6a1ebcf6c663279a647ca229ba97.jpg)](https://gyazo.com/b19f6a1ebcf6c663279a647ca229ba97)
+
 「Webサービスを通して素晴らしき日本の平成ギャル文化を後世に遺す」という壮大なビジョンのもと始動した， 歴史的文化的に大変意義のある取り組み
 https://drive.google.com/open?id=1cLcOD5lf6njmIYlM-LF79hvJiMPBdHNv
-
-### 初期モックアップ
-![iOSgayzo](https://user-images.githubusercontent.com/30789283/56588966-51913180-661f-11e9-97c4-a1d2af020a5d.jpg)
 
 ## 環境
 | | |
@@ -44,3 +43,7 @@ $git clone https://github.com/milkywei/gal_project.git
 $cd gal_project
 $gem install bundler
 $bundle install --path vendor/bundle
+```
+
+### 初期モックアップ
+![iOSgayzo](https://user-images.githubusercontent.com/30789283/56588966-51913180-661f-11e9-97c4-a1d2af020a5d.jpg)
